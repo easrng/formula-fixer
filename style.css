@@ -1,0 +1,132 @@
+@font-face {
+  font-family: formulafixer;
+  src: url('https://cdn.glitch.global/cff0911e-8ec9-4366-a191-2dc4ce6d4e81/formulafixer.woff2?v=1654470439216');
+}
+* {
+  box-sizing: border-box;
+}
+:root {
+  --scrollbar-width: 0;
+}
+body:not(:root), html {
+  font-family: Roboto, system-ui, sans-serif;
+  background: rgb(248, 249, 250);
+  width: 100%;
+  height: 100%!important;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background: #fff;
+  display: flex;
+  height: 64px;
+  border-bottom: 1px solid #dadce0;
+  align-items: center;
+  padding: 8px;
+  flex-shrink: 0;
+}
+#logo {
+  width: 40px;
+  height: 40px;
+}
+h1 {
+  color: #5f6368;
+  margin: 0;
+  font-size: 22px;
+  padding-left: 8px;
+  font-weight: normal;
+  font-family: formulafixer,Arial,sans-serif;
+  margin-top: 2px;
+}
+#container {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  padding-bottom: 0;
+}
+main {
+  background: #fff;
+  box-shadow: 0 1px 3px 1px rgba(60,64,67,.15);
+  max-width: 816px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+#fixit {
+  margin: 0;
+  font: inherit;
+  border: none;
+  line-height: inherit;
+  background: none;
+  color: inherit;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  min-height:1em;
+  padding: 1rem;
+}
+#preview {
+  overflow-x: auto;
+  padding: 1rem;
+  white-space: pre-line;
+}
+#info {
+  background: #f9f9f9;
+  border-radius: 2px;
+  box-shadow: 0 0 2px #888888;
+  position: absolute;
+  right: calc(2rem + var(--scrollbar-width,0));
+  bottom: 0.75rem;
+  border: none;
+  height: 36px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+svg {
+  fill: currentColor;
+}
+#label {
+  margin-left: 3px;
+  max-width: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, max-width 0.5s ease, margin 0.5s ease;
+}
+#info:hover #label, #info:focus-visible #label {
+  max-width: 11ch;
+  opacity: 1;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#info:focus-visible {
+  outline: 1px solid #1a73e8;
+}
+.swal2-validation-message {
+  display: none;
+}
+.swal2-popup[style*="flex"] {
+  display: grid !important;
+}
+@media (min-width: calc(816px + 2rem)) {
+  #info {
+    right: calc(1rem + var(--scrollbar-width,0));
+  }
+}
+#swal2-content {
+  text-align: left;
+  margin: 0;
+  font-size: 1rem;
+}
+a {
+  color: #1E88E5;
+}
