@@ -60,11 +60,9 @@
 .swal2-title {
     color: rgba(0,0,0,.87);
     margin-top: 0;
-    font-family: Roboto,sans-serif;
     font-size: 1.25rem;
     line-height: 2rem;
-    font-weight: 500;
-    letter-spacing: .0125em;
+    font-weight: bold;
     text-decoration: inherit;
     text-transform: inherit;
     display: flex;
@@ -88,11 +86,7 @@
 
 .swal2-content {
     color: rgba(0,0,0,.6);
-    font-family: Roboto,sans-serif;
     font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 400;
-    letter-spacing: .03125em;
     text-decoration: inherit;
     text-transform: inherit;
     flex-grow: 1;
@@ -135,8 +129,8 @@ button.swal2-styled:not(:root) {
     text-overflow: ellipsis;
     color: rgb(var(--matter-helper-theme));
     background: transparent !important;
-    font-family: var(--matter-font-family,"Roboto","Segoe UI",BlinkMacSystemFont,system-ui,-apple-system);
     font-size: 14px;
+    font-family: inherit;
     font-weight: 500;
     line-height: 36px;
     outline: none;
